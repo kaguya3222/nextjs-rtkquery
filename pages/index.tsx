@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-interface someProps {}
+interface IndexProps {}
 
-export default function Some({}: someProps) {
+export default function Index({}: IndexProps) {
   return (
     <div>
       <Link href="/pikachu">Go to pokemon</Link>

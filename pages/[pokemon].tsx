@@ -2,9 +2,9 @@ import { useRouter } from "next/router";
 import { pokemonApi, useGetPokemonByNameQuery } from "../app/services/pokemon";
 import { wrapper } from "../app/store";
 
-export default function Home() {
+export default function Pokemon() {
   const { query } = useRouter();
-  const { data } = useGetPokemonByNameQuery(query.pokemon as string);
+  const { data } = useGetPokemonByNameQuery(query.pokemon as string); // data is undefined for the first render
 
   if (!data)
     throw new Error("Data is undefined when page is opened by client routing");
